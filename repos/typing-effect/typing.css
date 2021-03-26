@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+:root {
+
+    --background-color: rgb(32, 32, 32);
+    --font-size: 3rem;
+    --font-color: white;
+    --line-aproximate: 2rem;
+    --cursor-color: rgb(0, 255, 98);
+    --cursor-size: 10px;
+
+
+    --time-to-start: 3s;
+
+    --line1-width: 205px;
+    --line1-range: 7;
+    --line1-time: .7s;
+
+    --line2-width: 205px;
+    --line2-range: 7;
+    --line2-time: .7s;
+
+    --line3-width: 378px;
+    --line3-range: 13;
+    --line3-time: 1.3s;
+
+    /* Don't change it:*/
+    --cursor1-delay: calc(var(--line1-time) + var(--time-to-start) + .2s);
+
+    --line2-delay: calc(var(--cursor1-delay) + .2s);
+    --cursor2-delay: calc(var(--line2-delay) + var(--line2-time) + .2s);
+
+    --line3-delay: calc(var(--line2-delay) + var(--line2-time) + .2s);
+}
+body {background: var(--background-color);}
+h2 {
+    font-size: var(--font-size);
+    color: var(--font-color);
+    font-family: 'Source Code Pro', monospace; 
+}
+
+.container h2 {
+    align-self: flex-start;
+    max-width: 30rem;
+    margin-bottom: calc(-1*var(--line-aproximate));
+    white-space: nowrap;
+    overflow: hidden;  
+    border-right: solid var(--cursor-size) transparent;   
+}
+
+.container h2:nth-child(1) {
+    border-right: solid var(--cursor-size) var(--cursor-color);
+}
+
+
+.container h2:nth-child(1) {
+    animation: animated-text1 var(--line1-time) steps(var(--line1-range),end) var(--time-to-start) 1 normal both,
+    animated-cursor1 .6s steps(12,end) infinite,
+    cursor-disabled .1s linear var(--cursor1-delay) forwards;
+}
+
+.container h2:nth-child(2) {
+    animation: animated-text2 var(--line2-time) steps(var(--line2-range),end) var(--line2-delay) 1 normal both,
+    animated-cursor .6s steps(12,end) var(--line2-delay) infinite,
+    cursor-disabled .1s linear var(--cursor2-delay) forwards;
+}
+
+.container h2:nth-child(3) {
+    animation: animated-text3 var(--line3-time) steps(var(--line3-range),end) var(--line3-delay) 1 normal both,
+    animated-cursor .6s steps(12,end) var(--line3-delay) infinite;
+}
+
+@keyframes animated-text1
+{
+    from{
+        width: 0;
+    }
+    to{
+        width: var(--line1-width);
+    }
+}
+@keyframes animated-text2
+{
+    from{
+        width: 0;
+    }
+    to{
+        width: var(--line2-width);
+    }
+}
+@keyframes animated-text3
+{
+    from{
+        width: 0;
+    }
+    to{
+        width: var(--line3-width);
+    }
+}
+@keyframes animated-cursor
+{
+    from{
+        border-right-color: transparent;
+    }
+    to{
+        border-right-color: var(--cursor-color);
+    }
+}
+@keyframes animated-cursor1
+{
+    from{
+        border-right-color: var(--cursor-color)
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
+@keyframes cursor-disabled
+{
+    to{
+        border-right-color: transparent;
+    }
+}
