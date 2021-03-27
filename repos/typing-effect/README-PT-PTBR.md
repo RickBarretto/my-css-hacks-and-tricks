@@ -10,6 +10,17 @@ It is a mini-project to animate Header text mainly, without line of JavaScript. 
 ## Glosário:
 + Use o menu do topo-esquerdo à esquerda do título README-PT-PTBR.md ou os links abaixo:
 ----
+- [Typing - Typewriter animation effect (Escrevendo - Efeito de animação de máquina de escrever)](#typing---typewriter-animation-effect-escrevendo---efeito-de-animação-de-máquina-de-escrever)
+  - [O que é?](#o-que-é)
+  - [Glosário:](#glosário)
+  - [+ Use o menu do topo-esquerdo à esquerda do título README-PT-PTBR.md ou os links abaixo:](#-use-o-menu-do-topo-esquerdo-à-esquerda-do-título-readme-pt-ptbrmd-ou-os-links-abaixo)
+  - [Porque usar isso?](#porque-usar-isso)
+  - [Como usá-lo:](#como-usá-lo)
+  - [Explicação](#explicação)
+    - [Por trás do código](#por-trás-do-código)
+    - [Como encontrar a largura do conteúdo](#como-encontrar-a-largura-do-conteúdo)
+  - [Parâmetros](#parâmetros)
+
 
 ## Porque usar isso?
 
