@@ -1,10 +1,10 @@
-# My css hacks and tricks
+# Typing - Typewriter animation effect
 - ##### Give me the credits, please.
-- ##### [Portuguese Translation](../README-PT-PTBR.md)
+- ##### [Portuguese Translation](README-PT-PTBR.md)
 
 ## What is it?
 
-It is a mini-project to animate Header text mainly, without line of JavaScript. You can use it in your project, just pasting in your code. Read the [MIT License](LICENSE) to more info!
+It is a mini-project to animate Header text mainly, without line of JavaScript. You can use it in your project, just pasting in your code. Read the [MIT License](../../LICENSE) to more info!
 
 
 ## Content Table
@@ -12,6 +12,16 @@ It is a mini-project to animate Header text mainly, without line of JavaScript. 
 + Use the top-left menu to the left of the title README.md or this links bellow:
 ----
 
+- [Typing - Typewriter animation effect](#typing---typewriter-animation-effect)
+  - [What is it?](#what-is-it)
+  - [Content Table](#content-table)
+  - [+ Use the top-left menu to the left of the title README.md or this links bellow:](#-use-the-top-left-menu-to-the-left-of-the-title-readmemd-or-this-links-bellow)
+  - [Why use it?](#why-use-it)
+  - [How to use it](#how-to-use-it)
+  - [Explanation](#explanation)
+    - [Behind the code](#behind-the-code)
+    - [How to find the content width?](#how-to-find-the-content-width)
+  - [Paramenters](#paramenters)
 
 ## Why use it?
 
