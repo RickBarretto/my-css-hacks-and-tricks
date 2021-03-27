@@ -12,34 +12,40 @@
 
     --time-to-start: 3s;
 
+    /* First line - Line 0 */
+    --line-first-width: 205px;
+    --line-first-range: 7;
+    --line-first-time: .7s;
+
+    /* Line 1 */
     --line1-width: 205px;
     --line1-range: 7;
     --line1-time: .7s;
 
-    --line2-width: 205px;
-    --line2-range: 7;
-    --line2-time: .7s;
+    /* Last line */
+    --line-last-width: 378px;
+    --line-last-range: 13;
+    --line-last-time: 1.3s;
 
-    --line3-width: 378px;
-    --line3-range: 13;
-    --line3-time: 1.3s;
+    /* Times */
+    --cursor-first-delay: calc(var(--line-first-time) + var(--time-to-start) + .2s);
 
-    /* Don't change it:*/
-    --cursor1-delay: calc(var(--line1-time) + var(--time-to-start) + .2s);
+    --line1-delay: calc(var(--cursor-first-delay) + .2s);
+    --cursor1-delay: calc(var(--line1-delay) + var(--line1-time) + .2s);
 
-    --line2-delay: calc(var(--cursor1-delay) + .2s);
-    --cursor2-delay: calc(var(--line2-delay) + var(--line2-time) + .2s);
-
-    --line3-delay: calc(var(--line2-delay) + var(--line2-time) + .2s);
+    --line-last-delay: calc(var(--line1-delay) + var(--line1-time) + .2s);
 }
+/* REMOVE THIS BODY - It's just for demonstration */
 body {background: var(--background-color);}
-h2 {
+.typing-container {background: var(--background-color);}
+
+.typing-line {
     font-size: var(--font-size);
     color: var(--font-color);
     font-family: 'Source Code Pro', monospace; 
 }
 
-.container h2 {
+.typing-container .typing-line {
     align-self: flex-start;
     max-width: 30rem;
     margin-bottom: calc(-1*var(--line-aproximate));
@@ -48,26 +54,26 @@ h2 {
     border-right: solid var(--cursor-size) transparent;   
 }
 
-.container h2:nth-child(1) {
+.typing-container .typing-line:nth-child(1) {
     border-right: solid var(--cursor-size) var(--cursor-color);
 }
 
 
-.container h2:nth-child(1) {
-    animation: animated-text1 var(--line1-time) steps(var(--line1-range),end) var(--time-to-start) 1 normal both,
+.typing-container .typing-line:nth-child(1) {
+    animation: animated-text1 var(--line-first-time) steps(var(--line-first-range),end) var(--time-to-start) 1 normal both,
     animated-cursor1 .6s steps(12,end) infinite,
+    cursor-disabled .1s linear var(--cursor-first-delay) forwards;
+}
+
+.typing-container h2:nth-child(2) {
+    animation: animated-text2 var(--line1-time) steps(var(--line1-range),end) var(--line1-delay) 1 normal both,
+    animated-cursor .6s steps(12,end) var(--line1-delay) infinite,
     cursor-disabled .1s linear var(--cursor1-delay) forwards;
 }
 
-.container h2:nth-child(2) {
-    animation: animated-text2 var(--line2-time) steps(var(--line2-range),end) var(--line2-delay) 1 normal both,
-    animated-cursor .6s steps(12,end) var(--line2-delay) infinite,
-    cursor-disabled .1s linear var(--cursor2-delay) forwards;
-}
-
-.container h2:nth-child(3) {
-    animation: animated-text3 var(--line3-time) steps(var(--line3-range),end) var(--line3-delay) 1 normal both,
-    animated-cursor .6s steps(12,end) var(--line3-delay) infinite;
+.typing-container h2:nth-child(3) {
+    animation: animated-text3 var(--line-last-time) steps(var(--line-last-range),end) var(--line-last-delay) 1 normal both,
+    animated-cursor .6s steps(12,end) var(--line-last-delay) infinite;
 }
 
 @keyframes animated-text1
@@ -76,7 +82,7 @@ h2 {
         width: 0;
     }
     to{
-        width: var(--line1-width);
+        width: var(--line-first-width);
     }
 }
 @keyframes animated-text2
@@ -85,7 +91,7 @@ h2 {
         width: 0;
     }
     to{
-        width: var(--line2-width);
+        width: var(--line1-width);
     }
 }
 @keyframes animated-text3
@@ -94,7 +100,7 @@ h2 {
         width: 0;
     }
     to{
-        width: var(--line3-width);
+        width: var(--line-last-width);
     }
 }
 @keyframes animated-cursor
