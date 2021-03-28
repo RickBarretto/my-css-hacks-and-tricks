@@ -87,3 +87,20 @@ footer > .fc > div a:hover ~ .bottom {
         display: none;
     }
 }
+
+body > a {
+    position: absolute;
+    bottom: 4rem;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    background-color: wheat;
+    margin: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+body > a > svg {
+    width: 2rem;
+}
