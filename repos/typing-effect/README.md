@@ -1,6 +1,6 @@
 # Typing - Typewriter animation effect
-<div style="display:flex;justify-content:flex-end;">
-<button style="background:transparent;border:2px solid gray;border-radius:10px;padding:.5rem;"><a href="preview/index.html" style="color:gray;">View Example</a></button></div>
+
+<button><a href="preview/index.html">View Example</a></button>
 
 - ##### Give me the credits, please.
 - ##### [Portuguese Translation](README-PT-PTBR.md)
