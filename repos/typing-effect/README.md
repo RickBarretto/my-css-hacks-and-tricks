@@ -2,6 +2,7 @@
 
 <button><a href="https://rickbarretto.github.io/my-css-hacks-and-tricks/repos/typing-effect/preview/">View Example</a></button>
 
+![HEADER-Example](header.gif)
 - ##### Give me the credits, please.
 - ##### [Portuguese Translation](README-PT-PTBR.md)
 

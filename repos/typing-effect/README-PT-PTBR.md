@@ -2,8 +2,10 @@
 
 <button><a href="preview/index.html">View Example</a></button>
 
+![HEADER-Example](header.gif)
 - ##### Give me the credits, please.
 - ##### [English Translation](README.md)
+
 
 ## O que é?
 
