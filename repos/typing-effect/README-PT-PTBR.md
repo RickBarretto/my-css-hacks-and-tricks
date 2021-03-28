@@ -7,6 +7,8 @@
 
 ## O que é?
 
+<button><a href="https://rickbarretto.github.io/my-css-hacks-and-tricks/repos/typing-effect/preview/">Ver Exemplo</a></button>
+
 It is a mini-project to animate Header text mainly, without line of JavaScript. You can use it in your project, just pasting in your code. Read the [MIT License](../../LICENSE) to more info!
 
 

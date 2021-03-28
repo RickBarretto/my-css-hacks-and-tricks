@@ -1,6 +1,6 @@
 # Typing - Typewriter animation effect
 
-<button><a href="preview/index.html">View Example</a></button>
+<button><a href="https://rickbarretto.github.io/my-css-hacks-and-tricks/repos/typing-effect/preview/">View Example</a></button>
 
 - ##### Give me the credits, please.
 - ##### [Portuguese Translation](README-PT-PTBR.md)
