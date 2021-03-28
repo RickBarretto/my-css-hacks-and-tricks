@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+:root {
+
+    --background-color: linear-gradient(230deg, #1916d9, #d91688);;
+    --font-size: 3rem;
+    --font-color: rgb(145, 77, 255);
+    --line-aproximate: -1rem;
+    --cursor-color: rgb(145, 77, 255);
+    --cursor-size: 5px;
+
+
+    --time-to-start: 3s;
+
+    /* First line - Line 0 */
+    --line-first-width: 215px;
+    --line-first-range: 7;
+    --line-first-time: .7s;
+
+    /* Line 1 */
+    --line1-width: 270px;
+    --line1-range: 9;
+    --line1-time: .9s;
+
+    /* Last line */
+    --line-last-width: 409px;
+    --line-last-range: 14;
+    --line-last-time: 1.4s;
+
+    /* Times */
+    --cursor-first-delay: calc(var(--line-first-time) + var(--time-to-start) + .2s);
+
+    --line1-delay: calc(var(--cursor-first-delay) + .2s);
+    --cursor1-delay: calc(var(--line1-delay) + var(--line1-time) + .2s);
+
+    --line-last-delay: calc(var(--line1-delay) + var(--line1-time) + .2s);
+}
+
+.example {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.example .typing-container {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.example .typing-container {background: var(--background-color);animation: Gradient 40s ease-in infinite ;background-size: 400% 400%;}
+
+@keyframes Gradient {
+    0%{background-position:91% 0%}
+    50%{background-position:10% 100%}
+    100%{background-position:91% 0%}
+}
+
+.example .typing-line {
+    font-size: var(--font-size);
+    color: var(--font-color);
+    font-family: 'Source Code Pro', monospace; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.example .typing-container .typing-line {
+    max-width: 30rem;
+    margin-bottom: calc(-1*var(--line-aproximate));
+    white-space: nowrap;
+    overflow: hidden;  
+    border-right: solid var(--cursor-size) transparent;   
+}
+
+.example .typing-container .typing-line:nth-child(1) {
+    border-right: solid var(--cursor-size) var(--cursor-color);
+}
+
+
+.example .typing-container .typing-line:nth-child(1) {
+    animation: animated-text1 var(--line-first-time) steps(var(--line-first-range),end) var(--time-to-start) 1 normal both,
+    animated-cursor1 .6s steps(12,end) infinite,
+    cursor-disabled .1s linear var(--cursor-first-delay) forwards;
+}
+
+.example .typing-container h2:nth-child(2) {
+    animation: animated-text2 var(--line1-time) steps(var(--line1-range),end) var(--line1-delay) 1 normal both,
+    animated-cursor .6s steps(12,end) var(--line1-delay) infinite,
+    cursor-disabled .1s linear var(--cursor1-delay) forwards;
+}
+
+.example .typing-container h2:nth-child(3) {
+    animation: animated-text3 var(--line-last-time) steps(var(--line-last-range),end) var(--line-last-delay) 1 normal both,
+    animated-cursor .6s steps(12,end) var(--line-last-delay) infinite;
+}
+
+@keyframes animated-text1
+{
+    from{
+        width: 0;
+    }
+    to{
+        width: var(--line-first-width);
+    }
+}
+@keyframes animated-text2
+{
+    from{
+        width: 0;
+    }
+    to{
+        width: var(--line1-width);
+    }
+}
+@keyframes animated-text3
+{
+    from{
+        width: 0;
+    }
+    to{
+        width: var(--line-last-width);
+    }
+}
+@keyframes animated-cursor
+{
+    from{
+        border-right-color: transparent;
+    }
+    to{
+        border-right-color: var(--cursor-color);
+    }
+}
+@keyframes animated-cursor1
+{
+    from{
+        border-right-color: var(--cursor-color)
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
+@keyframes cursor-disabled
+{
+    to{
+        border-right-color: transparent;
+    }
+}
+

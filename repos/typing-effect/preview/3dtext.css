@@ -1,0 +1,12 @@
+.typing-container h2 {
+    text-rendering: optimizeLegibility;
+    
+    --shadow: rgb(65, 0, 170);
+    --distance: 6px; 
+    text-shadow:    var(--distance) var(--distance) var(--shadow),
+                    calc(var(--distance) - 1px) calc(var(--distance) - 1px) var(--shadow),
+                    calc(var(--distance) - 2px) calc(var(--distance) - 2px) var(--shadow),
+                    calc(var(--distance) - 3px) calc(var(--distance) - 3px) var(--shadow),
+                    calc(var(--distance) - 4px) calc(var(--distance) - 4px) var(--shadow),
+                    calc(var(--distance) - 5px) calc(var(--distance) - 5px) var(--shadow); 
+}
