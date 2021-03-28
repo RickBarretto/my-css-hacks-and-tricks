@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 :root {
 
-    --background-color: linear-gradient(230deg, #1916d9, #d91688);;
+    --background-color: linear-gradient(230deg, #1916d9, #d91688);
     --font-size: 3rem;
     --font-color: rgb(145, 77, 255);
     --line-aproximate: -1rem;
@@ -33,6 +33,19 @@
     --cursor1-delay: calc(var(--line1-delay) + var(--line1-time) + .2s);
 
     --line-last-delay: calc(var(--line1-delay) + var(--line1-time) + .2s);
+}
+
+@media screen and (max-width: 600px)
+{
+    :root {
+        --font-size: 2rem;
+        --line-aproximate: -1rem;
+        --cursor-size: 5px;
+    
+        --line-first-width: 150px;
+        --line1-width: 190px;
+        --line-last-width: 275px;
+    } 
 }
 
 .example {
