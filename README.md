@@ -8,8 +8,6 @@ It is my personal repository of css codes. Tricks and hacks, with explanations. 
 
 ## Content Table
 
-+ Use the top-left menu to the left of the title README.md or this links bellow:
-----
-
++ [typescript text effect](https://github.com/RickBarretto/my-css-hacks-and-tricks/tree/main/repos/typing-effect)
 
 
